@@ -35,6 +35,11 @@ html {
     align-items: center;
 }
 
+.navbar.sticky {
+    height: 8rem;
+    background-color: #fff;
+}
+
 /* logo */
 .logo{
     display: flex;
