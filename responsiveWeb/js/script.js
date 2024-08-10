@@ -32,3 +32,17 @@ filterLinks.forEach((filterLink)=>{
     })
 })
 //End of Projects
+
+//video
+const videoContainer = document.querySelector(".video-container")
+const mainVideo = document.querySelector('video')
+const playPauseBtn = document.querySelector('.play-pause i')
+
+playPauseBtn.addEventListener('click',()=>{
+    if(mainVideo.paused){
+        mainVideo.play()
+    }else {
+        mainVideo.pause()
+    }
+})
+//End of video
