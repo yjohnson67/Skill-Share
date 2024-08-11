@@ -37,6 +37,16 @@ filterLinks.forEach((filterLink)=>{
 const videoContainer = document.querySelector(".video-container")
 const mainVideo = document.querySelector('video')
 const playPauseBtn = document.querySelector('.play-pause i')
+const progressBar = document.querySelector('.progress-bar')
+const skipBackward = document.querySelector('skip-backward')
+const skipBackward = document.querySelector('skip-forward')
+
+
+mainVideo.addEventListener('timeupdate',(e)=>{
+    let {currentTime, duration} = e.target
+    let percent = (currentTime / duration)* 100
+    progressBar.style.width = `${percent}%`
+})
 
 playPauseBtn.addEventListener('click',()=>{
     if(mainVideo.paused){
@@ -44,5 +54,17 @@ playPauseBtn.addEventListener('click',()=>{
     }else {
         mainVideo.pause()
     }
+})
+
+mainVideo.addEventListener('play',()=>{
+playPauseBtn.classList.replace('fa-play', 'fa-pause')
+})
+
+mainVideo.addEventListener('pause',()=>{
+    playPauseBtn.classList.replace('fa-pause', 'fa-play')
+})
+
+skipBackward.addEventListener('click',()=> {
+    mainVideo.currentTime -= 5
 })
 //End of video

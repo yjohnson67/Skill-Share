@@ -1172,7 +1172,7 @@ header{
 .video-timeline {
     position: absolute;
     width: 100%;
-    height: 7rem;   
+    height: 0.7rem;   
     cursor: pointer;
 }
 
@@ -1192,7 +1192,7 @@ header{
 }
 
 .progress-bar{
-    width: 50%;
+    width: 0%;
     height: 100%;
     background-color: #2289ff;
     position: relative;
@@ -1206,7 +1206,7 @@ header{
     background-color: #2289ff;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: -1.3rem;
     transform: translateY(-50%);
 }
 
