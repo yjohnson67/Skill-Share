@@ -1167,6 +1167,15 @@ header{
     position: absolute;
     left: 0;
     bottom: -5.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .08s ease;
+}
+
+.video-container .show-controls .controls-wrapper {
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 .video-timeline {
@@ -1187,7 +1196,7 @@ header{
     top: -2.5rem;
     left: 50%;
     transform: translateX(-50%);
-    color: #333;
+    color: #FFF;
     font-size: 1.3rem;
 }
 
@@ -1208,6 +1217,16 @@ header{
     top: 50%;
     right: -1.3rem;
     transform: translateY(-50%);
+}
+
+.progress-area span,
+.progress-bar::before {
+    display: none;
+}
+
+.video-timeline:hover .progress-area span,
+.video-timeline:hover .progress-bar::before {
+    display: block;
 }
 
 .video-controls {

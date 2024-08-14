@@ -50,6 +50,24 @@ const fullscreenBtn = document.querySelector('.fullscreen i')
 const videoTimeline = document.querySelector('.video-timeline')
 const currentVidTime = document.querySelector('.current-time')
 const videoDuration = document.querySelector('.video-duration')
+let timer
+
+
+//Controls
+const hideControls = () => {
+    if(mainVideo.paused)return
+    setTimeout(() => {
+        videoContainer.classList.remove('show-controls')
+    },3000)
+}
+
+hideControls()
+
+videoContainer.addEventListener('mousemove', ()=> {
+    videoContainer.classList.add('show-controls')
+})
+//End of Controls
+
 
 //Progress Bar
 const formatTime=(time)=>{
@@ -84,6 +102,32 @@ videoTimeline.addEventListener("click",(e)=>{
 
 mainVideo.addEventListener('loadeddata', ()=> {
     videoDuration.innerText = formatTime(mainVideo.duration)
+})
+
+const draggableProgressBar = e => {
+    let timelineWidth = videoTimeline.clientWidth
+    progressBar.style.width =`${e.offsetX}px`
+    mainVideo.currentTime = (e.offsetX /timelineWidth) *
+    mainVideo.duration
+    currentVidTime.innerText = formatTime(mainVideo.currentTime)
+}
+
+videoTimeline.addEventListener('mousedown', () => {
+    videoTimeline.addEventListener('mousemove', draggableProgressBar)
+})
+
+videoContainer.addEventListener('mouseup', () => {
+    videoTimeline.removeEventListener('mousemove', draggableProgressBar)
+})
+
+videoTimeline.addEventListener('mousemove', e=> {
+    const progressTime = document.querySelector('.progress-area span')
+    let offsetX = e.offsetX
+    progressTime.style.left = `${offsetX}px`
+    let timelineWidth = videoTimeline.clientWidth
+    let progressBarTime = (e.offsetX /timelineWidth) *
+    mainVideo.duration
+    progressTime.innerText = formatTime(progressBarTime)
 })
 //End of Video Timeline
 
