@@ -1146,6 +1146,15 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.video-container.show-video{
+    opacity: 1;
+    visibility: visible;
+
 }
 
 .video {
@@ -1225,8 +1234,8 @@ header{
     display: none;
 }
 
-.video-timeline:hover.progress-area span,
-.video-timeline:hover.progress-bar::before {
+.video-timeline:hover .progress-area span,
+.video-timeline:hover .progress-bar::before {
     display: block;
 }
 
