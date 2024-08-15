@@ -55,16 +55,18 @@ let timer
 
 //Controls
 const hideControls = () => {
-    if(mainVideo.paused)return
-    setTimeout(() => {
+    if(mainVideo.paused) return
+    timer = setTimeout(() => {
         videoContainer.classList.remove('show-controls')
     },3000)
 }
 
 hideControls()
 
-videoContainer.addEventListener('mousemove', ()=> {
+videoContainer.addEventListener('mousemove', () => {
     videoContainer.classList.add('show-controls')
+    clearTimeout(timer)
+    hideControls()
 })
 //End of Controls
 
@@ -125,7 +127,7 @@ videoTimeline.addEventListener('mousemove', e=> {
     let offsetX = e.offsetX
     progressTime.style.left = `${offsetX}px`
     let timelineWidth = videoTimeline.clientWidth
-    let progressBarTime = (e.offsetX /timelineWidth) *
+    let progressBarTime = (e.offsetX / timelineWidth) *
     mainVideo.duration
     progressTime.innerText = formatTime(progressBarTime)
 })
