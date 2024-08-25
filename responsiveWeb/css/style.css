@@ -1553,7 +1553,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-top: 2rem solid rgba(1, 122, 170, 0.2);
+    border-top: .2rem solid rgba(1, 122, 170, 0.2);
     padding-top: 1rem;
 }
 
