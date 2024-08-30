@@ -1,7 +1,9 @@
 /* Account */
+/* Custom Scrollbar */
 body::-webkit-scrollbar-thumb{
     background: linear-gradient(#1d4fb3, #538cfd);
 }
+/*End of Custom Scrollbar */
 
 .account {
     width: 100%;
