@@ -122,3 +122,21 @@ testimonial-top {
 }
 /* End of Testimonials */
 
+/* Responsive */
+@media(max-width: 1600px){
+    .testimonials-wrapper{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .testimonials-wrapper {
+        width: 95%;
+    }
+
+    .testimonial {
+        width: 32rem;
+    }
+}
+/*End of Responsive */
+

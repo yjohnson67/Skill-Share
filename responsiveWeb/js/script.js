@@ -1,12 +1,17 @@
 //Sticky nav bar
 const navbar = document.querySelector('.navbar')
+const menuIcon = document.querySelector('.menu-icon')
  
 window.addEventListener("scroll",()=>{
-    if(window.scrollY > 0){
-        navbar.classList.add('sticky')
-    }else{
+    if(window.innerWidth <= 820 && navbar.classList.contains('hamburger')){
         navbar.classList.remove('sticky')
+    }else{
+        navbar.classList.toggle('sticky', window.scrollY > 0)
     }
+})
+
+menuIcon.addEventListener('click', () => {
+    navbar.classList.toggle('hamburger')
 })
 //End of sticky navigation bar 
 
