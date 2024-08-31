@@ -1850,6 +1850,10 @@ footer {
         align-items: center;
     }
 
+    .nav-item.show::before {
+        content: '-';
+    }
+
     .nav-item:last-child {
         position: absolute;
         bottom: 0;
@@ -1878,6 +1882,20 @@ footer {
         background-color: #ff4ea0;
         color: #fff;
         font-size: 2.2rem;
+    }
+
+    .dropdown {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .nav-item:hover .dropdown {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .nav-item.show .dropdown {
+        opacity: 1;
+        visibility: visible;
     }
 
     .dropdown-1 {
@@ -1946,6 +1964,17 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .position.menu-icon {
+        top: 4rem;
+        transform: translateY(-50%);
+        transition: all, 0.3s ease;
+    }
+
+    .navbar.sticky.line {
+        background-color: #092627;
+
     }
 
     .line {
