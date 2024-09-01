@@ -387,6 +387,57 @@ body::-webkit-scrollbar-thumb{
 
     .products-content-left {
         width: 60%;
+        height: auto;
+        padding: 5rem 0;
+    }
+
+    .products-content-left {
+        margin: 3rem 0 5rem 0;
+    }
+
+    .products-content-right img:nth-child(1) {
+        width: 22rem;
+        height: 44rem;
+        top: 65%;
+        right: 24%;
+    }
+
+    .products-content-right img:nth-child(2) {
+        width: 12rem;
+        top: 50%;
+        right: 43%;
+    }
+
+    .products-content-right img:nth-child(3) {
+        width: 20rem;
+        bottom: 21%;
+        right: 11%;
+    }
+
+    .product-promo {
+        height: 120vh;
+    }
+
+    .promo-rectangle {
+        width: 40rem;
+        height: 40rem;
+        top: 32%;
+        left: 6%;
+    }
+
+    .small-circle {
+        top: 30%;
+        right: 40%;
+    }
+
+    .large-circle {
+        bottom: 30%;
+        right: 5%;
+    }
+
+    .promo-content h1 {
+        font-size: 2rem;
     }
 }
+
 /*End of Responsive */

@@ -2006,7 +2006,7 @@ footer {
 
     .bg-main {
         width: 250%;
-        top: 105%;
+        top: -105%;
         left: -50%;
 }
 
