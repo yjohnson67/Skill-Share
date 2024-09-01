@@ -1713,12 +1713,12 @@ footer {
         font-size: 2rem;
     }
 
-    bg-main {
+    .bg-main {
         left: -25%;
     }
 
     .bg-1 {
-        right: -5;
+        right: -5%;
     }
 
     .bg-2 {
@@ -1983,7 +1983,7 @@ footer {
         transition: transform 0.3s ease;
     }
 
-    .navbar.sticky.line {
+    .navbar.sticky .line {
         background-color: #092627;
 
     }
@@ -2023,12 +2023,11 @@ footer {
 }
 
 .services-bg-1 {
-    top: 20%;
+    top: -20%;
     right: -5%;
 }
 
 .services-bg-2 {
-    top: 20%;
     left: 0;
 }
 

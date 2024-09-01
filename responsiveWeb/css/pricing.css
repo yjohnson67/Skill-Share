@@ -295,6 +295,17 @@ body::-webkit-scrollbar-thumb{
         transform: translateZ(0);
     }
 }
+
+@media (max-width: 768px) {
+    .pricing-rectangle {
+        top: 50%;
+        left: -6%;
+    }
+
+    .pricing-large-circle {
+        bottom: 12%;
+    }
+}
 /* End of Responsive */
 
 

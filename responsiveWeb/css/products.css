@@ -265,7 +265,7 @@ body::-webkit-scrollbar-thumb{
     }
 
     .promo-content h1{
-        width: 3.5rem;
+        font-size: 3.5rem;
     }
 }
 
@@ -353,7 +353,7 @@ body::-webkit-scrollbar-thumb{
         width: 70%;
     }
 
-    .products-content h1 {
+    .promo-content h1 {
         font-size: 2.5rem;
     }
 
@@ -382,7 +382,7 @@ body::-webkit-scrollbar-thumb{
         height: 115rem;
         flex-direction: column;
         align-items: center;
-        padding: 5rem 0 r rem 10rem;
+        padding: 5rem 0 5rem 10rem;
     }
 
     .products-content-left {
@@ -391,7 +391,7 @@ body::-webkit-scrollbar-thumb{
         padding: 5rem 0;
     }
 
-    .products-content-left {
+    .products-content-left p {
         margin: 3rem 0 5rem 0;
     }
 
@@ -414,7 +414,7 @@ body::-webkit-scrollbar-thumb{
         right: 11%;
     }
 
-    .product-promo {
+    .products-promo {
         height: 120vh;
     }
 
